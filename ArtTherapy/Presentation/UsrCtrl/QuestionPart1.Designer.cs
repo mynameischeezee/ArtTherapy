@@ -134,6 +134,7 @@
             // 
             this.QuestionText.BackColor = System.Drawing.Color.White;
             this.QuestionText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QuestionText.Enabled = false;
             this.QuestionText.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.QuestionText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.QuestionText.Location = new System.Drawing.Point(63, 128);
