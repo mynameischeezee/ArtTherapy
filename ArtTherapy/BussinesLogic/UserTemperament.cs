@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,6 +42,23 @@ namespace ArtTherapy.BussinesLogic
         public static void AddPointToMelancholic()
         {
             _Melancholic += 1;
+        }
+        public static bool HighestTemperament()
+        {
+            List<int> TempArr = new List<int>();
+            TempArr.Add(_Choleric);
+            TempArr.Add(_Sanguine);
+            TempArr.Add(_Phlegmatic);
+            TempArr.Add(_Melancholic);
+            int count = TempArr.Count(x => x  == TempArr.Max());
+            if (count >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

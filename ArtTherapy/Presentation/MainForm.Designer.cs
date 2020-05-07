@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LogoIMG = new System.Windows.Forms.PictureBox();
             this.CloseIMG = new System.Windows.Forms.PictureBox();
             this.questionPart11 = new ArtTherapy.Presentation.UsrCtrl.QuestionPart1();
@@ -61,11 +60,10 @@
             // 
             // questionPart11
             // 
-            this.questionPart11.BackColor = System.Drawing.Color.Transparent;
-            this.questionPart11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("questionPart11.BackgroundImage")));
-            this.questionPart11.Location = new System.Drawing.Point(183, 90);
+            this.questionPart11.BackColor = System.Drawing.Color.White;
+            this.questionPart11.Location = new System.Drawing.Point(106, 80);
             this.questionPart11.Name = "questionPart11";
-            this.questionPart11.Size = new System.Drawing.Size(963, 618);
+            this.questionPart11.Size = new System.Drawing.Size(1152, 618);
             this.questionPart11.TabIndex = 2;
             // 
             // MainForm

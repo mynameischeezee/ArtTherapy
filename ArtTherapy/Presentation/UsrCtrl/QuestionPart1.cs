@@ -13,6 +13,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
 {
     public partial class QuestionPart1 : UserControl
     {
+        private int CurrentAnswer = 0;
         public QuestionPart1()
         {
             InitializeComponent();
@@ -25,10 +26,19 @@ namespace ArtTherapy.Presentation.UsrCtrl
             Answer3.Text = MainQuestions.Questions1[QuestionNumber - 1].AnswerCText;
             Answer4.Text = MainQuestions.Questions1[QuestionNumber - 1].AnswerDText;
         }
+        private void UnCheck()
+        {
+            Answer1.Checked = false;
+            Answer2.Checked = false;
+            Answer3.Checked = false;
+            Answer4.Checked = false;
+        }
         private void NextQestion()
         {
             MainForm.CurrentQuestion += 1;
             LoadQuestionsAndAnswersText(MainForm.CurrentQuestion);
+            QuestionNumber.Text = $"Питання {MainForm.CurrentQuestion} з 13";
+
         }
         private void QuestionPart1_Load(object sender, EventArgs e)
         {
@@ -39,16 +49,55 @@ namespace ArtTherapy.Presentation.UsrCtrl
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (MainForm.CurrentQuestion == 12)
+            if (MainForm.CurrentQuestion == 13)
             {
-                MainForm.CurrentQuestion = 1;
-                NextQestion();
+                SelectAnswer.Select(CurrentAnswer);
+                CurrentAnswer = 0;
+                UnCheck();
+                if (UserTemperament.HighestTemperament())
+                {
+                    QuestionText.Text = MainQuestions.Part1ControlQuestion.QuestionText;
+                    Answer1.Text = MainQuestions.Part1ControlQuestion.AnswerAText;
+                    Answer2.Text = MainQuestions.Part1ControlQuestion.AnswerBText;
+                    Answer3.Text = MainQuestions.Part1ControlQuestion.AnswerCText;
+                    Answer4.Text = MainQuestions.Part1ControlQuestion.AnswerDText;
+                    MainForm.CurrentQuestion += 1;
+                    QuestionNumber.Text = "Контрольне Запитання: ";
+                }
+                else
+                {
+                    MessageBox.Show("Hello Gordon");
+                }
             }
             else
             {
+
+                SelectAnswer.Select(CurrentAnswer);
+                CurrentAnswer = 0;
+                UnCheck();
                 NextQestion();
             }
             
+        }
+
+        private void Answer1_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentAnswer = 1;
+        }
+
+        private void Answer2_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentAnswer = 2;
+        }
+
+        private void Answer3_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentAnswer = 3;
+        }
+
+        private void Answer4_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentAnswer = 4;
         }
     }
 }

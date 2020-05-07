@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BussinesLogic\MainQuestions.cs" />
     <Compile Include="BussinesLogic\QuestionPart1.cs" />
+    <Compile Include="BussinesLogic\SelectAnswer.cs" />
     <Compile Include="BussinesLogic\UserMood.cs" />
     <Compile Include="BussinesLogic\UserTemperament.cs" />
     <Compile Include="Presentation\MainForm.cs">
