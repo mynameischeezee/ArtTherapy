@@ -34,5 +34,21 @@ namespace ArtTherapy.BussinesLogic
         {
             _Calm += 1;
         }
+        public static bool HighestMood()
+        {
+            List<int> TempArr = new List<int>();
+            TempArr.Add(_Stressful);
+            TempArr.Add(_Emotional);
+            TempArr.Add(_Calm);
+            int count = TempArr.Count(x => x == TempArr.Max());
+            if (count >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.LogoIMG = new System.Windows.Forms.PictureBox();
             this.CloseIMG = new System.Windows.Forms.PictureBox();
             this.questionPart11 = new ArtTherapy.Presentation.UsrCtrl.QuestionPart1();
+            this.questionPart21 = new ArtTherapy.Presentation.UsrCtrl.QuestionPart2();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).BeginInit();
             this.SuspendLayout();
@@ -61,10 +62,19 @@
             // questionPart11
             // 
             this.questionPart11.BackColor = System.Drawing.Color.White;
-            this.questionPart11.Location = new System.Drawing.Point(106, 80);
+            this.questionPart11.Location = new System.Drawing.Point(120, 90);
             this.questionPart11.Name = "questionPart11";
             this.questionPart11.Size = new System.Drawing.Size(1152, 618);
             this.questionPart11.TabIndex = 2;
+            // 
+            // questionPart21
+            // 
+            this.questionPart21.BackColor = System.Drawing.Color.White;
+            this.questionPart21.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.questionPart21.Location = new System.Drawing.Point(120, 90);
+            this.questionPart21.Name = "questionPart21";
+            this.questionPart21.Size = new System.Drawing.Size(1152, 618);
+            this.questionPart21.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -72,6 +82,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ArtTherapy.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.questionPart21);
             this.Controls.Add(this.questionPart11);
             this.Controls.Add(this.CloseIMG);
             this.Controls.Add(this.LogoIMG);
@@ -91,6 +102,7 @@
         private System.Windows.Forms.PictureBox LogoIMG;
         private System.Windows.Forms.PictureBox CloseIMG;
         private Presentation.UsrCtrl.QuestionPart1 questionPart11;
+        private Presentation.UsrCtrl.QuestionPart2 questionPart21;
     }
 }
 

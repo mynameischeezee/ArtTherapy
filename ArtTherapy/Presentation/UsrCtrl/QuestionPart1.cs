@@ -14,6 +14,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
     public partial class QuestionPart1 : UserControl
     {
         private int CurrentAnswer = 0;
+        public QuestionPart2 Part2;
         public QuestionPart1()
         {
             InitializeComponent();
@@ -35,9 +36,9 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         private void NextQestion()
         {
-            MainForm.CurrentQuestion += 1;
-            LoadQuestionsAndAnswersText(MainForm.CurrentQuestion);
-            QuestionNumber.Text = $"Питання {MainForm.CurrentQuestion} з 13";
+            MainForm.CurrentQuestionPart1 += 1;
+            LoadQuestionsAndAnswersText(MainForm.CurrentQuestionPart1);
+            QuestionNumber.Text = $"Питання {MainForm.CurrentQuestionPart1} з 13";
 
         }
         private void QuestionPart1_Load(object sender, EventArgs e)
@@ -49,9 +50,9 @@ namespace ArtTherapy.Presentation.UsrCtrl
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (MainForm.CurrentQuestion == 13)
+            if (MainForm.CurrentQuestionPart1 == 13)
             {
-                SelectAnswer.Select(CurrentAnswer);
+                SelectAnswerPart1.Select(CurrentAnswer);
                 CurrentAnswer = 0;
                 UnCheck();
                 if (UserTemperament.HighestTemperament())
@@ -61,18 +62,28 @@ namespace ArtTherapy.Presentation.UsrCtrl
                     Answer2.Text = MainQuestions.Part1ControlQuestion.AnswerBText;
                     Answer3.Text = MainQuestions.Part1ControlQuestion.AnswerCText;
                     Answer4.Text = MainQuestions.Part1ControlQuestion.AnswerDText;
-                    MainForm.CurrentQuestion += 1;
+                    MainForm.CurrentQuestionPart1 += 1;
                     QuestionNumber.Text = "Контрольне Запитання: ";
                 }
                 else
                 {
-                    MessageBox.Show("Hello Gordon");
+                    Part2.Show();
+                    Part2.BringToFront();
+                    this.Hide();
                 }
+            }
+            else if (MainForm.CurrentQuestionPart1 == 14)
+            {
+                SelectAnswerPart1.Select(CurrentAnswer);
+                CurrentAnswer = 0;
+                Part2.Show();
+                Part2.BringToFront();
+                this.Hide();
             }
             else
             {
 
-                SelectAnswer.Select(CurrentAnswer);
+                SelectAnswerPart1.Select(CurrentAnswer);
                 CurrentAnswer = 0;
                 UnCheck();
                 NextQestion();

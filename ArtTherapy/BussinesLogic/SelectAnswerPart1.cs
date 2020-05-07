@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtTherapy.BussinesLogic
 {
-  public static  class SelectAnswer
+  public static  class SelectAnswerPart1
     {
         public static void Select(int Answerid)
         {

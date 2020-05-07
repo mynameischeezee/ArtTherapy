@@ -13,8 +13,9 @@ namespace ArtTherapy
 {
     public partial class MainForm : Form
     {
-        public static int CurrentQuestion = 0;
+        public static int CurrentQuestionPart1 = 0;
         public static int CurrentPart = 1;
+        public static int CurrentQuestionPart2 = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -27,7 +28,9 @@ namespace ArtTherapy
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-          
+            questionPart11.BringToFront();
+            questionPart11.Part2 = questionPart21;
+            questionPart21.Hide();
         }
     }
 }
