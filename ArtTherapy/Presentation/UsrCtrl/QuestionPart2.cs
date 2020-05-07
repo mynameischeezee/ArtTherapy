@@ -15,6 +15,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
     {
         private int CurrentAnswer = 0;
         public Resultt result;
+        private List<RadioButton> buttons = new List<RadioButton>();
         private void LoadQuestionsAndAnswersText(int QuestionNumber)
         {
             QuestionText.Text = MainQuestions.Questions2[QuestionNumber - 1].QuestionText;
@@ -35,6 +36,15 @@ namespace ArtTherapy.Presentation.UsrCtrl
             QuestionNumber.Text = $"Питання {MainForm.CurrentQuestionPart2} з 5";
 
         }
+        private void RemoveButtons()
+        {
+            List<int> ID = UserMood.IdOfHighest();
+
+            foreach (int value in ID)
+            {
+                buttons[value].Visible = false;
+            }
+        }
         private void Next_Click(object sender, EventArgs e)
         {
             if (MainForm.CurrentQuestionPart2 == 5)
@@ -44,6 +54,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
                 UnCheck();
                 if (UserMood.HighestMood())
                 {
+                    RemoveButtons();
                     QuestionText.Text = MainQuestions.Part2ControlQuestion.QuestionText;
                     Answer1.Text = MainQuestions.Part2ControlQuestion.AnswerAText;
                     Answer2.Text = MainQuestions.Part2ControlQuestion.AnswerBText;
@@ -63,7 +74,11 @@ namespace ArtTherapy.Presentation.UsrCtrl
             {
                 SelectAnswerPart2.Select(CurrentAnswer);
                 CurrentAnswer = 0;
-                
+                this.Hide();
+                result.Show();
+                result.BringToFront();
+                result.SetText();
+
             }
             else
             {
@@ -88,6 +103,9 @@ namespace ArtTherapy.Presentation.UsrCtrl
         public QuestionPart2()
         {
             InitializeComponent();
+            buttons.Add(Answer1);
+            buttons.Add(Answer2);
+            buttons.Add(Answer3);
         }
         private void QuestionPart2_Load(object sender, EventArgs e)
         {

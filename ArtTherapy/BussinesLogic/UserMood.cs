@@ -50,5 +50,24 @@ namespace ArtTherapy.BussinesLogic
                 return false;
             }
         }
+        public static List<int> IdOfHighest()
+        {
+            List<int> TempArr = new List<int>();
+            TempArr.Add(_Stressful);
+            TempArr.Add(_Emotional);
+            TempArr.Add(_Calm);
+            int count = TempArr.Count(x => x == TempArr.Max());
+            List<int> IDs = new List<int>();
+
+            foreach (int value in TempArr)
+            {
+                if (value != TempArr.Max())
+                {
+                    IDs.Add(TempArr.IndexOf(value));
+                }
+            }
+            return IDs;
+
+        }
     }
 }

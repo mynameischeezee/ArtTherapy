@@ -15,9 +15,16 @@ namespace ArtTherapy.Presentation.UsrCtrl
     {
         private int CurrentAnswer = 0;
         public QuestionPart2 Part2;
+        private List<RadioButton> buttons = new List<RadioButton>();
+
+        
         public QuestionPart1()
         {
             InitializeComponent();
+            buttons.Add(Answer1);
+            buttons.Add(Answer2);
+            buttons.Add(Answer3);
+            buttons.Add(Answer4);
         }
         private void LoadQuestionsAndAnswersText(int QuestionNumber)
         {
@@ -41,6 +48,15 @@ namespace ArtTherapy.Presentation.UsrCtrl
             QuestionNumber.Text = $"Питання {MainForm.CurrentQuestionPart1} з 13";
 
         }
+        private void RemoveButtons()
+        {
+            List<int> ID = UserTemperament.IdOfHighest();
+
+            foreach (int value in ID)
+            {
+                buttons[value].Visible = false;
+            }
+        }
         private void QuestionPart1_Load(object sender, EventArgs e)
         {
             
@@ -57,6 +73,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
                 UnCheck();
                 if (UserTemperament.HighestTemperament())
                 {
+                    RemoveButtons();
                     QuestionText.Text = MainQuestions.Part1ControlQuestion.QuestionText;
                     Answer1.Text = MainQuestions.Part1ControlQuestion.AnswerAText;
                     Answer2.Text = MainQuestions.Part1ControlQuestion.AnswerBText;
