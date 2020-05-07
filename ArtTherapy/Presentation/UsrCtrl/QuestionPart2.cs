@@ -14,6 +14,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
     public partial class QuestionPart2 : UserControl
     {
         private int CurrentAnswer = 0;
+        public Resultt result;
         private void LoadQuestionsAndAnswersText(int QuestionNumber)
         {
             QuestionText.Text = MainQuestions.Questions2[QuestionNumber - 1].QuestionText;
@@ -52,7 +53,10 @@ namespace ArtTherapy.Presentation.UsrCtrl
                 }
                 else
                 {
-                    MessageBox.Show("Hello Gordon");
+                    this.Hide();
+                    result.Show();
+                    result.BringToFront();
+                    result.SetText();
                 }
             }
             else if (MainForm.CurrentQuestionPart2 == 6)

@@ -1,6 +1,6 @@
 ﻿namespace ArtTherapy.Presentation.UsrCtrl
 {
-    partial class Result
+    partial class Resultt
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,10 +30,10 @@
         {
             this.CloseIMG = new System.Windows.Forms.PictureBox();
             this.ResultText = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ResultIMG = new System.Windows.Forms.PictureBox();
             this.Result2Text = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).BeginInit();
             this.SuspendLayout();
             // 
             // CloseIMG
@@ -63,13 +63,13 @@
             this.ResultText.TabIndex = 16;
             this.ResultText.Text = "Hello";
             // 
-            // pictureBox1
+            // ResultIMG
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(182, 295);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.ResultIMG.Location = new System.Drawing.Point(182, 295);
+            this.ResultIMG.Name = "ResultIMG";
+            this.ResultIMG.Size = new System.Drawing.Size(300, 300);
+            this.ResultIMG.TabIndex = 17;
+            this.ResultIMG.TabStop = false;
             // 
             // Result2Text
             // 
@@ -82,23 +82,24 @@
             this.Result2Text.Multiline = true;
             this.Result2Text.Name = "Result2Text";
             this.Result2Text.ReadOnly = true;
-            this.Result2Text.Size = new System.Drawing.Size(558, 398);
+            this.Result2Text.Size = new System.Drawing.Size(558, 300);
             this.Result2Text.TabIndex = 18;
             this.Result2Text.Text = "Hello";
             // 
-            // Result
+            // Resultt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Result2Text);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ResultIMG);
             this.Controls.Add(this.ResultText);
             this.Controls.Add(this.CloseIMG);
-            this.Name = "Result";
+            this.Name = "Resultt";
             this.Size = new System.Drawing.Size(1280, 720);
+            this.Load += new System.EventHandler(this.Result_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,7 +109,7 @@
 
         private System.Windows.Forms.PictureBox CloseIMG;
         private System.Windows.Forms.TextBox ResultText;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ResultIMG;
         private System.Windows.Forms.TextBox Result2Text;
     }
 }

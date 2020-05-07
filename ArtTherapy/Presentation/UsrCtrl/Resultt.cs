@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ArtTherapy.BussinesLogic;
 
 namespace ArtTherapy.Presentation.UsrCtrl
 {
-    public partial class Result : UserControl
+    public partial class Resultt : UserControl
     {
-        public Result()
+        public Resultt()
         {
             InitializeComponent();
         }
@@ -20,6 +21,18 @@ namespace ArtTherapy.Presentation.UsrCtrl
         private void CloseIMG_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        public void SetText()
+        {
+            Result res = FindResult.ReturnResult();
+            ResultText.Text = res.Text1;
+            Result2Text.Text = res.Text2;
+            ResultIMG.Image = res.Img;
+        }
+
+        private void Result_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

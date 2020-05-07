@@ -28,8 +28,10 @@ namespace ArtTherapy
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            res.Hide();
             questionPart11.BringToFront();
             questionPart11.Part2 = questionPart21;
+            questionPart21.result = res;
             questionPart21.Hide();
         }
     }
