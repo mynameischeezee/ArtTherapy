@@ -43,6 +43,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         private void NextQestion()
         {
+            CurrentAnswer = 0;
             MainForm.CurrentQuestionPart1 += 1;
             LoadQuestionsAndAnswersText(MainForm.CurrentQuestionPart1);
             QuestionNumber.Text = $"Питання {MainForm.CurrentQuestionPart1} з 13";
@@ -66,46 +67,60 @@ namespace ArtTherapy.Presentation.UsrCtrl
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (MainForm.CurrentQuestionPart1 == 13)
+            try
             {
-                SelectAnswerPart1.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                UnCheck();
-                if (UserTemperament.HighestTemperament())
+                if (CurrentAnswer == 0)
                 {
-                    RemoveButtons();
-                    QuestionText.Text = MainQuestions.Part1ControlQuestion.QuestionText;
-                    Answer1.Text = MainQuestions.Part1ControlQuestion.AnswerAText;
-                    Answer2.Text = MainQuestions.Part1ControlQuestion.AnswerBText;
-                    Answer3.Text = MainQuestions.Part1ControlQuestion.AnswerCText;
-                    Answer4.Text = MainQuestions.Part1ControlQuestion.AnswerDText;
-                    MainForm.CurrentQuestionPart1 += 1;
-                    QuestionNumber.Text = "Контрольне Запитання: ";
+                    throw new Exception("No answer");
                 }
                 else
                 {
-                    Part2.Show();
-                    Part2.BringToFront();
-                    this.Hide();
+                    if (MainForm.CurrentQuestionPart1 == 13)
+                    {
+                        SelectAnswerPart1.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        UnCheck();
+                        if (UserTemperament.HighestTemperament())
+                        {
+                            RemoveButtons();
+                            QuestionText.Text = MainQuestions.Part1ControlQuestion.QuestionText;
+                            Answer1.Text = MainQuestions.Part1ControlQuestion.AnswerAText;
+                            Answer2.Text = MainQuestions.Part1ControlQuestion.AnswerBText;
+                            Answer3.Text = MainQuestions.Part1ControlQuestion.AnswerCText;
+                            Answer4.Text = MainQuestions.Part1ControlQuestion.AnswerDText;
+                            MainForm.CurrentQuestionPart1 += 1;
+                            QuestionNumber.Text = "Контрольне Запитання: ";
+                        }
+                        else
+                        {
+                            Part2.Show();
+                            Part2.BringToFront();
+                            this.Hide();
+                        }
+                    }
+                    else if (MainForm.CurrentQuestionPart1 == 14)
+                    {
+                        SelectAnswerPart1.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        Part2.Show();
+                        Part2.BringToFront();
+                        this.Hide();
+                    }
+                    else
+                    {
+
+                        SelectAnswerPart1.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        UnCheck();
+                        NextQestion();
+                    }
                 }
             }
-            else if (MainForm.CurrentQuestionPart1 == 14)
-            {
-                SelectAnswerPart1.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                Part2.Show();
-                Part2.BringToFront();
-                this.Hide();
-            }
-            else
-            {
 
-                SelectAnswerPart1.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                UnCheck();
-                NextQestion();
+            catch
+            {
+                MessageBox.Show("Відповідь не обрана, оберіть відповідь.", "Увага !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
         }
 
         private void Answer1_CheckedChanged(object sender, EventArgs e)

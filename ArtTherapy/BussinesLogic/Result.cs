@@ -18,6 +18,7 @@ namespace ArtTherapy.BussinesLogic
         public string About1;
         public string About2;
         public Image Img;
+        public string URL;
         public Result(string T, string M, string D, string type, string text1, string text2, string A, Image I)
         {
             this.Temp = T;
@@ -40,6 +41,31 @@ namespace ArtTherapy.BussinesLogic
             this.Img = I;
             this.About1 = A;
             this.About2 = A2;
+        }
+        public Result(string T, string M, string D, string type, string text1, string text2, string A, string A2, Image I, string U)
+        {
+            this.Temp = T;
+            this.Mood = M;
+            this.Direction = D;
+            this.Type = type;
+            this.Text1 = text1;
+            this.Text2 = text2;
+            this.Img = I;
+            this.About1 = A;
+            this.About2 = A2;
+            this.URL = U;
+        }
+        public Result(string T, string M, string D, string type, string text1, string text2, string A, Image I, string U)
+        {
+            this.Temp = T;
+            this.Mood = M;
+            this.Direction = D;
+            this.Type = type;
+            this.Text1 = text1;
+            this.Text2 = text2;
+            this.Img = I;
+            this.About1 = A;
+            this.URL = U;
         }
     }
 }

@@ -31,6 +31,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         private void NextQestion()
         {
+            CurrentAnswer = 0;
             MainForm.CurrentQuestionPart2 += 1;
             LoadQuestionsAndAnswersText(MainForm.CurrentQuestionPart2);
             QuestionNumber.Text = $"Питання {MainForm.CurrentQuestionPart2} з 5";
@@ -47,46 +48,61 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         private void Next_Click(object sender, EventArgs e)
         {
-            if (MainForm.CurrentQuestionPart2 == 5)
+            try
             {
-                SelectAnswerPart2.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                UnCheck();
-                if (UserMood.HighestMood())
+                if (CurrentAnswer == 0)
                 {
-                    RemoveButtons();
-                    QuestionText.Text = MainQuestions.Part2ControlQuestion.QuestionText;
-                    Answer1.Text = MainQuestions.Part2ControlQuestion.AnswerAText;
-                    Answer2.Text = MainQuestions.Part2ControlQuestion.AnswerBText;
-                    Answer3.Text = MainQuestions.Part2ControlQuestion.AnswerCText;
-                    MainForm.CurrentQuestionPart2 += 1;
-                    QuestionNumber.Text = "Контрольне Запитання: ";
+                    throw new Exception("No answer");
                 }
                 else
                 {
-                    this.Hide();
-                    result.Show();
-                    result.BringToFront();
-                    result.SetText();
+                    if (MainForm.CurrentQuestionPart2 == 5)
+                    {
+                        SelectAnswerPart2.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        UnCheck();
+                        if (UserMood.HighestMood())
+                        {
+                            RemoveButtons();
+                            QuestionText.Text = MainQuestions.Part2ControlQuestion.QuestionText;
+                            Answer1.Text = MainQuestions.Part2ControlQuestion.AnswerAText;
+                            Answer2.Text = MainQuestions.Part2ControlQuestion.AnswerBText;
+                            Answer3.Text = MainQuestions.Part2ControlQuestion.AnswerCText;
+                            MainForm.CurrentQuestionPart2 += 1;
+                            QuestionNumber.Text = "Контрольне Запитання: ";
+                        }
+                        else
+                        {
+                            this.Hide();
+                            result.Show();
+                            result.BringToFront();
+                            result.SetText();
+                        }
+                    }
+                    else if (MainForm.CurrentQuestionPart2 == 6)
+                    {
+                        SelectAnswerPart2.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        this.Hide();
+                        result.Show();
+                        result.BringToFront();
+                        result.SetText();
+
+                    }
+                    else
+                    {
+                        SelectAnswerPart2.Select(CurrentAnswer);
+                        CurrentAnswer = 0;
+                        UnCheck();
+                        NextQestion();
+                    }
                 }
             }
-            else if (MainForm.CurrentQuestionPart2 == 6)
+            catch
             {
-                SelectAnswerPart2.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                this.Hide();
-                result.Show();
-                result.BringToFront();
-                result.SetText();
-
+                MessageBox.Show("Відповідь не обрана, оберіть відповідь.", "Увага !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-            {
-                SelectAnswerPart2.Select(CurrentAnswer);
-                CurrentAnswer = 0;
-                UnCheck();
-                NextQestion();
-            }
+            
         }
         private void Answer1_CheckedChanged(object sender, EventArgs e)
         {
