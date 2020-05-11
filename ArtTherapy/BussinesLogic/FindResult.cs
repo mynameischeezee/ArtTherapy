@@ -11,19 +11,22 @@ namespace ArtTherapy.BussinesLogic
         public static Result ReturnResult()
         {
             List<int> TempArr = new List<int>();
-            TempArr.Add(UserTemperament.Choleric);
-            TempArr.Add(UserTemperament.Sanguine);
-            TempArr.Add(UserTemperament.Phlegmatic);
-            TempArr.Add(UserTemperament.Melancholic);
+            TempArr.Add(Convert.ToInt32(UserTemperament.Choleric));
+            TempArr.Add(Convert.ToInt32(UserTemperament.Sanguine));
+            TempArr.Add(Convert.ToInt32(UserTemperament.Phlegmatic));
+            TempArr.Add(Convert.ToInt32(UserTemperament.Melancholic));
 
             int MaxIndexTemp = TempArr.IndexOf(TempArr.Max());
 
             List<int> TempList = new List<int>();
-            TempList.Add(UserMood.Stressful);
-            TempList.Add(UserMood.Emotional);
-            TempList.Add(UserMood.Calm);
+            TempList.Add(Convert.ToInt32(UserMood.Stressful));
+            TempList.Add(Convert.ToInt32(UserMood.Emotional));
+            TempList.Add(Convert.ToInt32(UserMood.Calm));
+            foreach (int i in TempList)
+            {
+                Console.WriteLine(i);
+            }
             int MaxIndexMood = TempList.IndexOf(TempList.Max());
-
             return MainResult.Results[MaxIndexTemp][MaxIndexMood];
         }
     }

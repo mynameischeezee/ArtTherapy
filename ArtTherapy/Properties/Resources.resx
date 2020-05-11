@@ -130,4 +130,40 @@
   <data name="QuestionBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\Images\QuestionBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="акварель" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\акварель.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="акрил" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\акрил.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="вышивка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\вышивка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="граттаж" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\граттаж.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="графика" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\графика.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="жидкий акрил" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\жидкий акрил.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="каллиграфия" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\каллиграфия.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="коллаж" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\коллаж.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="масло" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\масло.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="пастель" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\пастель.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="роспись" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\роспись.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="скульптура" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Media\Materials\скульптура.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

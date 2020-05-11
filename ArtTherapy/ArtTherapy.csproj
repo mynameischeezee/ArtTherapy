@@ -121,7 +121,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Media\Materials\акварель.PNG" />
+    <Content Include="Media\Materials\акрил.png" />
+    <Content Include="Media\Materials\вышивка.png" />
+    <Content Include="Media\Materials\граттаж.png" />
+    <Content Include="Media\Materials\графика.png" />
+    <Content Include="Media\Materials\жидкий акрил.png" />
+    <Content Include="Media\Materials\каллиграфия.png" />
+    <Content Include="Media\Materials\коллаж.png" />
+    <Content Include="Media\Materials\масло.png" />
+    <Content Include="Media\Materials\пастель.PNG" />
+    <Content Include="Media\Materials\роспись.png" />
+    <Content Include="Media\Materials\скульптура.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Media\Images\Background.png" />
   </ItemGroup>

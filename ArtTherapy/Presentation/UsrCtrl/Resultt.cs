@@ -13,7 +13,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
 {
     public partial class Resultt : UserControl
     {
-        private Result res = FindResult.ReturnResult();
+        
         public Resultt()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         public void SetText()
         {
+            Result res = FindResult.ReturnResult();
             ResultText.Text = res.Text1;
             Result2Text.Text = res.Text2;
             ResultIMG.Image = res.Img;
@@ -39,6 +40,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
 
         private void OpenInBrowser_Click(object sender, EventArgs e)
         {
+            Result res = FindResult.ReturnResult();
             System.Diagnostics.Process.Start(res.URL);
         }
     }

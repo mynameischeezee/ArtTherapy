@@ -28,30 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CloseIMG = new System.Windows.Forms.PictureBox();
             this.ResultText = new System.Windows.Forms.TextBox();
-            this.ResultIMG = new System.Windows.Forms.PictureBox();
             this.Result2Text = new System.Windows.Forms.TextBox();
             this.lbl_Temperament = new System.Windows.Forms.Label();
             this.lbl_Mood = new System.Windows.Forms.Label();
             this.Temperament = new System.Windows.Forms.Label();
             this.Mood = new System.Windows.Forms.Label();
             this.OpenInBrowser = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).BeginInit();
+            this.ResultIMG = new System.Windows.Forms.PictureBox();
+            this.CloseIMG = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CloseIMG
-            // 
-            this.CloseIMG.BackColor = System.Drawing.Color.Transparent;
-            this.CloseIMG.Image = global::ArtTherapy.Properties.Resources.Close;
-            this.CloseIMG.Location = new System.Drawing.Point(1246, 12);
-            this.CloseIMG.Name = "CloseIMG";
-            this.CloseIMG.Size = new System.Drawing.Size(22, 25);
-            this.CloseIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseIMG.TabIndex = 2;
-            this.CloseIMG.TabStop = false;
-            this.CloseIMG.Click += new System.EventHandler(this.CloseIMG_Click);
             // 
             // ResultText
             // 
@@ -68,14 +56,6 @@
             this.ResultText.TabIndex = 16;
             this.ResultText.Text = "Hello";
             // 
-            // ResultIMG
-            // 
-            this.ResultIMG.Location = new System.Drawing.Point(182, 321);
-            this.ResultIMG.Name = "ResultIMG";
-            this.ResultIMG.Size = new System.Drawing.Size(300, 300);
-            this.ResultIMG.TabIndex = 17;
-            this.ResultIMG.TabStop = false;
-            // 
             // Result2Text
             // 
             this.Result2Text.BackColor = System.Drawing.Color.White;
@@ -83,11 +63,11 @@
             this.Result2Text.Enabled = false;
             this.Result2Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Result2Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Result2Text.Location = new System.Drawing.Point(488, 321);
+            this.Result2Text.Location = new System.Drawing.Point(588, 321);
             this.Result2Text.Multiline = true;
             this.Result2Text.Name = "Result2Text";
             this.Result2Text.ReadOnly = true;
-            this.Result2Text.Size = new System.Drawing.Size(558, 300);
+            this.Result2Text.Size = new System.Drawing.Size(458, 300);
             this.Result2Text.TabIndex = 18;
             this.Result2Text.Text = "Hello";
             // 
@@ -149,6 +129,26 @@
             this.OpenInBrowser.UseVisualStyleBackColor = true;
             this.OpenInBrowser.Click += new System.EventHandler(this.OpenInBrowser_Click);
             // 
+            // ResultIMG
+            // 
+            this.ResultIMG.Location = new System.Drawing.Point(182, 321);
+            this.ResultIMG.Name = "ResultIMG";
+            this.ResultIMG.Size = new System.Drawing.Size(300, 300);
+            this.ResultIMG.TabIndex = 17;
+            this.ResultIMG.TabStop = false;
+            // 
+            // CloseIMG
+            // 
+            this.CloseIMG.BackColor = System.Drawing.Color.Transparent;
+            this.CloseIMG.Image = global::ArtTherapy.Properties.Resources.Close;
+            this.CloseIMG.Location = new System.Drawing.Point(1246, 12);
+            this.CloseIMG.Name = "CloseIMG";
+            this.CloseIMG.Size = new System.Drawing.Size(22, 25);
+            this.CloseIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CloseIMG.TabIndex = 2;
+            this.CloseIMG.TabStop = false;
+            this.CloseIMG.Click += new System.EventHandler(this.CloseIMG_Click);
+            // 
             // Resultt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,8 +166,8 @@
             this.Name = "Resultt";
             this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.Result_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

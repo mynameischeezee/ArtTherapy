@@ -73,6 +73,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
                         }
                         else
                         {
+                            MessageBox.Show(UserMood.Calm.ToString());
                             this.Hide();
                             result.Show();
                             result.BringToFront();
@@ -106,14 +107,17 @@ namespace ArtTherapy.Presentation.UsrCtrl
         }
         private void Answer1_CheckedChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("Changed");
             CurrentAnswer = 1;
         }
         private void Answer2_CheckedChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("Changed");
             CurrentAnswer = 2;
         }
         private void Answer3_CheckedChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("Changed");
             CurrentAnswer = 3;
         }
         public QuestionPart2()

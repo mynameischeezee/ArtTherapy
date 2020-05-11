@@ -108,7 +108,7 @@ namespace ArtTherapy.Presentation.UsrCtrl
                     }
                     else
                     {
-
+                        Console.WriteLine(CurrentAnswer);
                         SelectAnswerPart1.Select(CurrentAnswer);
                         CurrentAnswer = 0;
                         UnCheck();
