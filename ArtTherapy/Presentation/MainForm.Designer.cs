@@ -80,9 +80,9 @@
             // res
             // 
             this.res.BackColor = System.Drawing.Color.White;
-            this.res.Location = new System.Drawing.Point(0, 0);
+            this.res.Location = new System.Drawing.Point(120, 90);
             this.res.Name = "res";
-            this.res.Size = new System.Drawing.Size(1280, 720);
+            this.res.Size = new System.Drawing.Size(1158, 623);
             this.res.TabIndex = 4;
             // 
             // MainForm

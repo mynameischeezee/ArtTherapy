@@ -28,161 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ResultText = new System.Windows.Forms.TextBox();
-            this.Result2Text = new System.Windows.Forms.TextBox();
-            this.lbl_Temperament = new System.Windows.Forms.Label();
-            this.lbl_Mood = new System.Windows.Forms.Label();
-            this.Temperament = new System.Windows.Forms.Label();
-            this.Mood = new System.Windows.Forms.Label();
-            this.OpenInBrowser = new System.Windows.Forms.Button();
-            this.ResultIMG = new System.Windows.Forms.PictureBox();
-            this.CloseIMG = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resultt));
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.lbl_Direction = new System.Windows.Forms.Label();
+            this.lbl_Header = new System.Windows.Forms.TextBox();
+            this.btn_OpenInBrowser = new System.Windows.Forms.Button();
+            this.txtbox_About = new System.Windows.Forms.RichTextBox();
+            this.txtbox_Direction = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
-            // ResultText
+            // pic
             // 
-            this.ResultText.BackColor = System.Drawing.Color.White;
-            this.ResultText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ResultText.Enabled = false;
-            this.ResultText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResultText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ResultText.Location = new System.Drawing.Point(182, 130);
-            this.ResultText.Multiline = true;
-            this.ResultText.Name = "ResultText";
-            this.ResultText.ReadOnly = true;
-            this.ResultText.Size = new System.Drawing.Size(864, 185);
-            this.ResultText.TabIndex = 16;
-            this.ResultText.Text = "Hello";
+            this.pic.Location = new System.Drawing.Point(21, 97);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(300, 300);
+            this.pic.TabIndex = 1;
+            this.pic.TabStop = false;
             // 
-            // Result2Text
+            // lbl_Direction
             // 
-            this.Result2Text.BackColor = System.Drawing.Color.White;
-            this.Result2Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Result2Text.Enabled = false;
-            this.Result2Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Result2Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Result2Text.Location = new System.Drawing.Point(588, 321);
-            this.Result2Text.Multiline = true;
-            this.Result2Text.Name = "Result2Text";
-            this.Result2Text.ReadOnly = true;
-            this.Result2Text.Size = new System.Drawing.Size(458, 300);
-            this.Result2Text.TabIndex = 18;
-            this.Result2Text.Text = "Hello";
+            this.lbl_Direction.AutoSize = true;
+            this.lbl_Direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.lbl_Direction.Location = new System.Drawing.Point(353, 89);
+            this.lbl_Direction.Name = "lbl_Direction";
+            this.lbl_Direction.Size = new System.Drawing.Size(251, 42);
+            this.lbl_Direction.TabIndex = 2;
+            this.lbl_Direction.Text = "Рідкий Акрил";
             // 
-            // lbl_Temperament
+            // lbl_Header
             // 
-            this.lbl_Temperament.AutoSize = true;
-            this.lbl_Temperament.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.lbl_Temperament.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.lbl_Temperament.Location = new System.Drawing.Point(176, 27);
-            this.lbl_Temperament.Name = "lbl_Temperament";
-            this.lbl_Temperament.Size = new System.Drawing.Size(655, 33);
-            this.lbl_Temperament.TabIndex = 19;
-            this.lbl_Temperament.Text = "За результатми тестування ваш темперамент: ";
+            this.lbl_Header.BackColor = System.Drawing.Color.White;
+            this.lbl_Header.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.lbl_Header.Location = new System.Drawing.Point(21, 13);
+            this.lbl_Header.Multiline = true;
+            this.lbl_Header.Name = "lbl_Header";
+            this.lbl_Header.ReadOnly = true;
+            this.lbl_Header.Size = new System.Drawing.Size(1118, 64);
+            this.lbl_Header.TabIndex = 4;
+            this.lbl_Header.Text = "За результатом тесту ваш темперамент [ТЕМПЕРАМЕНТ] і ви перебуваєте у стані [СТАН" +
+    "]. \r\nІдеальний вид терапії для вас це:\r\n";
             // 
-            // lbl_Mood
+            // btn_OpenInBrowser
             // 
-            this.lbl_Mood.AutoSize = true;
-            this.lbl_Mood.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.lbl_Mood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.lbl_Mood.Location = new System.Drawing.Point(176, 60);
-            this.lbl_Mood.Name = "lbl_Mood";
-            this.lbl_Mood.Size = new System.Drawing.Size(188, 33);
-            this.lbl_Mood.TabIndex = 20;
-            this.lbl_Mood.Text = "Ваш настрій:";
+            this.btn_OpenInBrowser.FlatAppearance.BorderSize = 0;
+            this.btn_OpenInBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OpenInBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btn_OpenInBrowser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.btn_OpenInBrowser.Location = new System.Drawing.Point(334, 553);
+            this.btn_OpenInBrowser.Name = "btn_OpenInBrowser";
+            this.btn_OpenInBrowser.Size = new System.Drawing.Size(500, 41);
+            this.btn_OpenInBrowser.TabIndex = 6;
+            this.btn_OpenInBrowser.Text = "Дізнатися більше про свій темперамент";
+            this.btn_OpenInBrowser.UseVisualStyleBackColor = true;
+            this.btn_OpenInBrowser.Click += new System.EventHandler(this.btn_OpenInBrowser_Click);
             // 
-            // Temperament
+            // txtbox_About
             // 
-            this.Temperament.AutoSize = true;
-            this.Temperament.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Temperament.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Temperament.Location = new System.Drawing.Point(837, 27);
-            this.Temperament.Name = "Temperament";
-            this.Temperament.Size = new System.Drawing.Size(130, 33);
-            this.Temperament.TabIndex = 21;
-            this.Temperament.Text = "Холерик";
+            this.txtbox_About.BackColor = System.Drawing.Color.White;
+            this.txtbox_About.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_About.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.txtbox_About.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtbox_About.Location = new System.Drawing.Point(360, 155);
+            this.txtbox_About.Name = "txtbox_About";
+            this.txtbox_About.ReadOnly = true;
+            this.txtbox_About.Size = new System.Drawing.Size(779, 242);
+            this.txtbox_About.TabIndex = 7;
+            this.txtbox_About.Text = resources.GetString("txtbox_About.Text");
             // 
-            // Mood
+            // txtbox_Direction
             // 
-            this.Mood.AutoSize = true;
-            this.Mood.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Mood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Mood.Location = new System.Drawing.Point(370, 60);
-            this.Mood.Name = "Mood";
-            this.Mood.Size = new System.Drawing.Size(130, 33);
-            this.Mood.TabIndex = 22;
-            this.Mood.Text = "Холерик";
-            // 
-            // OpenInBrowser
-            // 
-            this.OpenInBrowser.FlatAppearance.BorderSize = 0;
-            this.OpenInBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenInBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.OpenInBrowser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.OpenInBrowser.Location = new System.Drawing.Point(376, 676);
-            this.OpenInBrowser.Name = "OpenInBrowser";
-            this.OpenInBrowser.Size = new System.Drawing.Size(519, 41);
-            this.OpenInBrowser.TabIndex = 23;
-            this.OpenInBrowser.Text = "Дізнатися більше про свій темперамент";
-            this.OpenInBrowser.UseVisualStyleBackColor = true;
-            this.OpenInBrowser.Click += new System.EventHandler(this.OpenInBrowser_Click);
-            // 
-            // ResultIMG
-            // 
-            this.ResultIMG.Location = new System.Drawing.Point(182, 321);
-            this.ResultIMG.Name = "ResultIMG";
-            this.ResultIMG.Size = new System.Drawing.Size(300, 300);
-            this.ResultIMG.TabIndex = 17;
-            this.ResultIMG.TabStop = false;
-            // 
-            // CloseIMG
-            // 
-            this.CloseIMG.BackColor = System.Drawing.Color.Transparent;
-            this.CloseIMG.Image = global::ArtTherapy.Properties.Resources.Close;
-            this.CloseIMG.Location = new System.Drawing.Point(1246, 12);
-            this.CloseIMG.Name = "CloseIMG";
-            this.CloseIMG.Size = new System.Drawing.Size(22, 25);
-            this.CloseIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseIMG.TabIndex = 2;
-            this.CloseIMG.TabStop = false;
-            this.CloseIMG.Click += new System.EventHandler(this.CloseIMG_Click);
+            this.txtbox_Direction.BackColor = System.Drawing.Color.White;
+            this.txtbox_Direction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_Direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtbox_Direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtbox_Direction.Location = new System.Drawing.Point(21, 428);
+            this.txtbox_Direction.Name = "txtbox_Direction";
+            this.txtbox_Direction.ReadOnly = true;
+            this.txtbox_Direction.Size = new System.Drawing.Size(1118, 128);
+            this.txtbox_Direction.TabIndex = 8;
+            this.txtbox_Direction.Text = resources.GetString("txtbox_Direction.Text");
             // 
             // Resultt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.OpenInBrowser);
-            this.Controls.Add(this.Mood);
-            this.Controls.Add(this.Temperament);
-            this.Controls.Add(this.lbl_Mood);
-            this.Controls.Add(this.lbl_Temperament);
-            this.Controls.Add(this.Result2Text);
-            this.Controls.Add(this.ResultIMG);
-            this.Controls.Add(this.ResultText);
-            this.Controls.Add(this.CloseIMG);
+            this.Controls.Add(this.txtbox_Direction);
+            this.Controls.Add(this.txtbox_About);
+            this.Controls.Add(this.btn_OpenInBrowser);
+            this.Controls.Add(this.lbl_Header);
+            this.Controls.Add(this.lbl_Direction);
+            this.Controls.Add(this.pic);
             this.Name = "Resultt";
-            this.Size = new System.Drawing.Size(1280, 720);
-            this.Load += new System.EventHandler(this.Result_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ResultIMG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseIMG)).EndInit();
+            this.Size = new System.Drawing.Size(1152, 618);
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox CloseIMG;
-        private System.Windows.Forms.TextBox ResultText;
-        private System.Windows.Forms.PictureBox ResultIMG;
-        private System.Windows.Forms.TextBox Result2Text;
-        private System.Windows.Forms.Label lbl_Temperament;
-        private System.Windows.Forms.Label lbl_Mood;
-        private System.Windows.Forms.Label Temperament;
-        private System.Windows.Forms.Label Mood;
-        private System.Windows.Forms.Button OpenInBrowser;
+        private System.Windows.Forms.PictureBox pic;
+        private System.Windows.Forms.Label lbl_Direction;
+        private System.Windows.Forms.TextBox lbl_Header;
+        private System.Windows.Forms.Button btn_OpenInBrowser;
+        private System.Windows.Forms.RichTextBox txtbox_About;
+        private System.Windows.Forms.RichTextBox txtbox_Direction;
     }
 }
