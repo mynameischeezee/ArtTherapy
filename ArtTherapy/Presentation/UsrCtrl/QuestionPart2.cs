@@ -73,7 +73,6 @@ namespace ArtTherapy.Presentation.UsrCtrl
                         }
                         else
                         {
-                            MessageBox.Show(UserMood.Calm.ToString());
                             this.Hide();
                             result.Show();
                             result.BringToFront();
